@@ -1,0 +1,707 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class assgemaintX {
+    public static void main(String []args) {
+        Scanner input = new Scanner(System.in);
+        final String BLUE = "\u001B[34m";
+        final String RED = "\u001B[31m";
+        final String YELLOW = "\u001B[33m";
+        final String GREEN = "\u001B[32m";
+        final String RESET = "\u001B[0m";
+        int task = 1;
+        do {
+            System.out.println(RED + "================================================================" + RED);
+            System.out.println(BLUE + "Welcome to the programming fundamentals lecture program" + RESET);
+            System.out.println(RED + "================= ===============================================" + RED);
+
+            System.out.println(BLUE +
+                    "1-Welcome program \n" +
+                    "2-Operators in Java \n" +
+                    "3-Functions of Math class \n" +
+                    "4-Functions of String class \n" +
+                    "5-Find the maximum number \n" +
+                    "6-Find even and odd numbers \n" +
+                    "7-Email_Ckecker \n" +
+                    "8-Username_Checker \n" +
+                    "9-Login_Authentication \n" +
+                    "10-Ascending sort for numbers \n" +
+                    "11-Simple calculator \n" +
+                    "12-Weekly scheduling \n" +
+                    "13-Summation of consecutive numbers \n" +
+                    "14-Summation of different numbers \n" +
+                    "15-Find squares of numbers \n" +
+                    "16-Find the positions of specific character \n" +
+                    " 17-Factorial program using while \n" +
+                    " 18-The difference between While and do-while \n" +
+                    "19-Number guessing game \n" +
+                    "20- Triangle of stars drawing \n" +
+                    "21:Exit the program" +
+
+                    "Enter your choice : " + RESET);
+            task = input.nextInt();
+            System.out.println("|poss enter|");
+            input.nextLine();
+            int t2;
+            switch (task) {
+                case 1:
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "1-Welcome program " + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+
+
+                    System.out.print("Hello,");
+                    System.out.print("w09 nelcome to");
+                    System.out.print("Java programming course");
+
+                    System.out.println("************************");
+                    System.out.println("Welcome \n to \n Java programming course");
+                    System.out.println("Welcome to \t Java programming course");
+                    System.out.println("\"Welcome to Java programming course\"");
+                    System.out.println("The path of Java file is:D:\\java course\\java");
+                    input.nextLine();
+                    break;
+                case 2:
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "2-Operators in Java  " + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+                    System.out.println(
+                                    "1. Adding numbers\n" +
+                                    "2. Decreasing numbers\n" +
+                                    "3. Logical operations");
+
+                    System.out.println("Enter number the porgramming of the chosic");
+                    t2 = input.nextInt();
+                    System.out.println("enter vulae number ");
+                    int n2 = input.nextInt();
+                    input.nextLine();
+                    switch (t2) {
+                        case 1:
+
+
+                            System.out.println(GREEN + "1- the value of number is ::" + "(" + n2++ + ")" + "n2++" + RESET);
+                            System.out.println(YELLOW + "2- the value of number is ::" + "(" + n2 + ")" + RESET);
+                            System.out.println(RED + "3-the value of number is::" + "(" + ++n2 + ")" + "++n2");
+
+                            n2 += 1;
+                            System.out.println(GREEN + "4- the value of number is ::" + "(" + n2 + ")" + "   n2 += 1" + RESET);
+                            n2 += 2;
+                            System.out.println(GREEN + "5- the value of number is ::" + "(" + n2 + ")" + " n2 += 2" + RESET);
+                            n2 = n2 + 2;
+                            System.out.println(GREEN + "6- the value of number is ::" + "(" + n2 + ")" + "n2 = n2 + 2" + RESET);
+                            input.nextLine();
+                            break;
+                        case 2:
+
+                            System.out.println("*************************************");
+                            System.out.println("1-The value of before is:" + n2-- + " n2--");
+                            System.out.println("2-The value of after  is:" + n2);
+                            System.out.println("*************************************");
+                            input.nextLine();
+                            break;
+                        case 3:
+                            boolean a = true, b = false;
+                            boolean c1 = (a && a); // test if both are true
+                            boolean c2 = (a && b);
+                            boolean c3 = (b && b);
+                            boolean c4 = (a || a); //test if either is true
+                            boolean c5 = (a || b);
+                            boolean c6 = (b || b);
+                            boolean c7 = !a; // invert initial values
+                            boolean c8 = !b;
+                            System.out.println("When the processes and" + "and:\n1:" + c1 + "(a && a)" + "\t2:" + c2 + "(a && b)" + "\t3:" + c3 + "(b && b)");
+                            System.out.println("When the processes or:::\n4:" + c4 + "(a || a)" + "\t5:" + c5 + "(a || b)" + "\t6:" + c6 + "(b || b)");
+                            System.out.println(" When the processes not:\n7:" + c7 + "!a" + "\t8:" + c8 + " !b");
+                            input.nextLine();
+                            break;
+                    }
+                    break;
+                case 3:
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "3-Functions of Math class  " + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+
+                    System.out.println("Choose one of the following programs::" +
+                            "1. Program to find the length of a chord\n" +
+                            "\n" +
+                            "2. Program to find the area of a circle");
+                    int t3 = input.nextInt();
+                    input.nextLine();
+                    switch (t3) {
+                        case 1:
+                            System.out.println("programing to find the length of a chord");
+                            System.out.println("#########################################");
+                            System.out.println("\n");
+                            System.out.println("Enter the value of  the first side");
+                            int s1 = input.nextInt();
+                            System.out.println("Enter the value of the second side");
+                            int s2 = input.nextInt();
+                            double aree = Math.sqrt((Math.pow(s1, 2) + Math.pow(s2, 2)));
+                            input.nextLine();
+                            System.out.println("the length of a chord  ::" + aree);
+                            System.out.println("user in the programing of functions is \n 1-Math.pow(" + s1 + ",2) \t2-Math.sqrt");
+                            input.nextLine();
+                            break;
+                        case 2:
+                            System.out.print("A program to find the area of a circle");
+                            System.out.println("######################################");
+
+                            System.out.println("Enter the radius of the circle");
+                            double ci1 = input.nextDouble();
+                            double circum = 2 * Math.PI * ci1;
+                            double area = Math.PI * Math.pow(ci1, 2);
+
+                            System.out.printf("The circum is:%.2f\n", circum);//
+                            System.out.printf("The area is:%.2f\n", area);
+                            input.nextLine();
+                            break;
+                    }
+                    break;
+                case 4:
+                    //do {
+                        System.out.println("############################");
+                        System.out.println("4-function of String class");
+                        System.out.println("############################");
+                        System.out.println("1. Show length\n" +
+                                "2. Merge text strings\n" +
+                                "3. Compare two text strings\n" +
+                                "4. Find character position\n" +
+                                "5. Print character position\n" +
+                                "6. Convert all characters in text to uppercase\n" +
+                                "7. Convert all characters to lowercase\n" +
+                                "8. Swap characters in text\n" +
+                                "9. Remove spaces from words");
+                        System.out.println("choose won programming of those ::");
+                        int t4 = input.nextInt();
+                        input.nextLine();
+                        System.out.println("Enter TEXT statements");
+                        String st = input.nextLine();
+                        input.nextLine();
+                        switch (t4) {
+                            case 1:
+                                System.out.println("SLOW LENGTH ");
+                                System.out.println("######################");
+                                System.out.println("lendth the statements is ::" + st.length());
+                                input.nextLine();
+                                break;
+                            case 2:
+                                System.out.println("###################");
+                                System.out.println("Merge text strings");
+                                System.out.println("Enter the comparison point");
+                                String st1 = input.nextLine();
+                                System.out.println("The concatenated string s:" + st.concat(st1));
+                                input.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Enter the text");
+                                String st2 = input.nextLine();
+                                input.nextLine();
+                                System.out.println("1- Ignoring letters\n" +
+                                        "\n" +
+                                        "2- Not ignoring letters");
+                                System.out.println(" Choose ");
+                                int t41 = input.nextInt();
+                                input.nextLine();
+                                switch (t41) {
+                                    case 1:
+                                        if (st.equalsIgnoreCase(st2))
+                                            System.out.println("Equal");
+                                        else
+                                            System.out.println(" Not Equal");
+                                        input.nextLine();
+                                        break;
+                                    case 2:
+                                        if (st.equals(st2))
+                                            System.out.println("Equal");
+                                        else
+                                            System.out.println(" Not Equal");
+                                        input.nextLine();
+                                        break;
+
+                                }
+                                break;
+                            case 4:
+                                System.out.println("########################");
+                                System.out.println("Enter letter");
+                                char l = input.next().charAt(0);
+                                System.out.println(" The position is:" + st.indexOf(l));
+                                input.nextLine();
+                                break;
+                            case 5:
+                                System.out.println("##############.indexOf(l)############");
+                                System.out.println("The position is:" + st.indexOf('S'));
+                                input.nextLine();
+                                break;
+                            case 6:
+                                System.out.println("#################.indexOf('S')##########");
+                                System.out.println("The uppercase is:" + st.toUpperCase());
+                                System.out.println("################toUpperCase()###################");
+                                input.nextLine();
+                                break;
+                            case 7:
+                                System.out.println("#################################");
+                                System.out.println("The lowercase:" + st.toLowerCase());
+                                System.out.println("############## st.toLowerCase()####################");
+                                input.nextLine();
+                                break;
+                            case 8:
+                                System.out.println("###############################");
+                                System.out.println("Write which letter you want to replace");
+                                char o = input.next().charAt(0);
+                                System.out.println("write which new letter ");
+                                char n1 = input.next().charAt(0);
+                                System.out.println(st.replace(o, n1));
+                                System.out.println("########st.replace(o, n1)##########");
+                                input.nextLine();
+                                break;
+                            case 9:
+                                System.out.println("########################");
+                                System.out.println(st.trim());
+                                System.out.println("#########st.trim()#########");
+                                input.nextLine();
+                                break;
+                            case 10:
+                                System.out.println("#######################");
+                                System.out.println("Enter statment");
+                                String st4 = input.next();
+                                System.out.println(st.contains(st4));
+                                input.nextLine();
+                                break;
+                            default:
+                                System.out.println(RED + "ERORR ERORR" + RESET);
+
+
+                        }
+                   // }while(t4!= 11);
+                    break;
+                case 5:
+                    System.out.println(YELLOW + "####################################" + RESET);
+                    System.out.println(YELLOW + "####################################" + RESET);
+                    System.out.println(YELLOW + "####################################" + RESET);
+                    System.out.println(
+                            " 5-Find the maximum number \n" +
+                                    RED + "################################\n" + RESET +
+                                    "1-Maximum of 2 numbers \n" +
+                                    "2-Maximum of 3 numbers ");
+                    System.out.println("Choose ");
+                    int t5 = input.nextInt();
+                    input.nextLine();
+                    switch (t5) {
+                        case 1:
+                            System.out.println(RED + "###################################" + RESET);
+                            System.out.println("find the maximum of two number");
+                            System.out.println(RED + "###################################" + RESET);
+                            System.out.println("Enter Frist number plesae::");
+                            int n15 = input.nextInt();
+                            System.out.println("Enter secand number plesae::");
+                            int n25 = input.nextInt();
+                            if (n15 != n25) {
+                                int max = n15;
+                                if (n25 > max)
+                                    max = n25;
+                                System.out.println("the maximum is :: " + max);
+                            } else
+                                System.out.println("the numbers is eqoale");
+                            input.nextLine();
+
+                            break;
+                        case 2:
+                            System.out.println(RED + "###################################" + RESET);
+                            System.out.println(" find the maximum of three numbers");
+                            System.out.println(RED + "###################################" + RESET);
+                            System.out.println("Enter Frist number plesae::");
+                            int n35 = input.nextInt();
+                            System.out.println("Enter secand number plesae::");
+                            int n45 = input.nextInt();
+                            System.out.println("Enter three number plesae::");
+                            int n55 = input.nextInt();
+                            int max = n35;
+                            if (max < n45)
+                                max = n45;
+                            if (max < n55)
+                                max = n55;
+                            System.out.println("the maximum number is ::" + max);
+                            break;
+
+                    }
+                    input.nextLine();
+                case 6:
+                    System.out.println(RED + "###################################" + RESET);
+                    System.out.println("find does number vuloe odd or even");
+                    System.out.println(RED + "###################################" + RESET);
+                    System.out.println(BLUE+"Enter number "+RESET);
+                    int n16 =input.nextInt();
+                    if(n16%2==0)
+                        System.out.println("THE NUMBER IS EVEN");
+                    if(n16<0)
+                        System.out.println(RED+"error"+RESET);
+                    else
+                        System.out.println("the number is odd");
+                    input.nextLine();
+                case 7:
+
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "7-Email_Ckecker" + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+
+                    System.out.println("Enter  your email ::");
+                    input.nextLine();
+                   String  email = input.nextLine();
+
+                    if (email.contains("@") && !email.contains(" ") && !email.startsWith("@") && !email.endsWith("@") && email.indexOf("@") < email.indexOf(".")) {
+                       int index = email.indexOf("@");
+                        String Username = email.substring(0, index);
+                       String  domain = email.substring(index + 1);
+
+                        System.out.println("your Username is :: " + Username);
+                        System.out.println("your domain is :: " + domain);
+                    } else
+                        System.out.println(RED + "ERROR    it cannot be true" + RESET);
+                    input.nextLine();
+                    break;
+                case 8:
+
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "8-Username_Checker" + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+                    System.out.println("Enter your username :: ");
+                    String user = input.nextLine();
+                    input.nextLine();
+                    if((user.length()>5 && user.length()>10)&&(!user.contains(" ")&&!user.contains("_")))
+                        System.out.println("HALLO WELCOME "+user);
+                    else if(user.length()<5 || user.length()<10)
+                        System.out.println("Username must be between 5 and 10");
+                    else if ( user.contains(" ") || user.contains("_"))
+                        System.out.println("Username must not contain spaces or underscores");
+                    input.nextLine();
+                    break;
+                case 9:
+
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "9-Login_Authentication" + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========" +
+                            "po91=\"mof12\";" +
+                            "   \"mofad@\"   " + RESET);
+                    String po91="mof12";
+                    String em91="mofad@";
+
+                    System.out.println(BLUE+"Enter your email");
+                    String em92 = input.nextLine();
+                    input.nextLine();
+
+                    System.out.println(BLUE+"Enter your paswerd"+RESET);
+                    String po92=input.nextLine();
+                    input.nextLine();
+                    if(po91.equals(po92) && em91.equals(em92))
+                        System.out.println(GREEN+"Login Successful"+RESET);
+                    else
+                        System.out.println(RED+"Try again,the username or password maybe wrong"+RESET);
+                    input.nextLine();
+                    break;
+                case 10:
+                    System.out.println(RED+"#################################"+RESET);
+                    System.out.println("10-Ascending sort for numbers \n" +
+                                 RED+   "#################################"+RESET+
+                            "1-For 2 numbers    2-For 3 numbers ");
+                    System.out.println(RED+"#################################"+RESET);
+                    System.out.println("Choose the number ::");
+                    int t10= input.nextInt();
+                    switch (t10) {
+                        case 1:
+                            System.out.println("Enter first number ::");
+                            int n110 = input.nextInt();
+                            System.out.println("Enter scond number :::");
+                            int n210 = input.nextInt();
+                            if (n110 > n210) {
+                                int temp1 = n110;
+                                n110 = n210;
+                                n210 = temp1;
+                            }
+                            System.out.println("AFTER TEMP IS::   " + n110 + "  " + n210);
+                            input.nextLine();
+                            break;
+                        case 2:
+                            System.out.println("Enter first number ::");
+                            int n310 = input.nextInt();
+                            System.out.println("Enter scond number :::");
+                            int n410 = input.nextInt();
+                            System.out.println("Enter Three number :::");
+                            int n510 = input.nextInt();
+                            int temp2;
+                            if (n310 > n410) {
+                                temp2 = n310;
+                                n310 = n410;
+                                n410 = temp2;
+                            }
+
+                            if (n310 > n510) {
+                                temp2 = n310;
+                                n310 = n510;
+                                n310 = temp2;
+                            }
+
+                            if (n410 > n510) {
+                                temp2 = n410;
+                                n410 = n510;
+                                n510 = temp2;
+                            }
+                            System.out.println(n310 + "   " + n410 + "   " + n510);
+
+
+
+                    }
+                    input.nextLine();
+                    break;
+                case 11:
+
+                    System.out.println(RED + "=======================" + RESET);
+                    System.out.println(YELLOW + "11-Simple calculator" + RESET);
+                    System.out.println(RED + "   ==================  " + RESET);
+                    System.out.println(RED + "       =========      " + RESET);
+                    System.out.println();
+                    System.out.println("WELCOME IN PROGRME -Simple calculator-");
+                    System.out.println("=======================================");
+
+                    System.out.println("Enter Value First Number:: ");
+                    int nu11 = input.nextInt();
+                    System.out.println("enter ( - , + , % , x)");
+                    char y = input.next().charAt(0);
+                    System.out.println("enter value scand number ::");
+                     int nu12 = input.nextInt();
+                    System.out.println("THE answer is :: ");
+                    switch (y) {
+                        case '-':
+                            System.out.println(nu11 - nu12);
+                            break;
+                        case '+':
+                            System.out.println(nu11 + nu12);
+                            break;
+                        case '%':
+                        case '/':
+                            if (nu12 <= 0)
+                                System.out.println(RED + "error number2 <0" + RESET);
+                            else
+                                System.out.println(nu11 / nu12);
+                            break;
+                        case 'x':
+                        case'*':
+                            System.out.println(nu11 * nu12);
+                            break;
+                        default:
+                            System.out.println(RED+"error math "+RESET);
+                    }
+                    input.nextLine();
+                    input.nextLine();
+
+                    break;
+                case 12:
+
+                    System.out.println("WELCOME IN PROGRAM -Weekly scheduling-");
+                    System.out.println("choose day");
+                    System.out.println("1-starday 2-sunday 3-monday  4-Tuesday 5-wednesday  6-Thursday 7-Friday");
+                     int num = input.nextInt();
+                    switch (num) {
+                        case 1:
+                            System.out.println("assignment is basic compeuter");
+                            break;
+                        case 2:
+                            System.out.println("assignment physcil ");
+                            break;
+                        case 3:
+                            System.out.println("Qize basic programing");
+                            break;
+                        case 4:
+                            System.out.println("Qize matrix lianer");
+                            break;
+                        case 5:
+                            System.out.println("assignment amli physcil ");
+                            break;
+                        case 6:
+                            System.out.println("assignment English");
+                            break;
+                        case 7:
+                            System.out.println("sleeeeeeeeeeeeeeeep please");
+                            break;
+                        default:
+                            System.out.println("The number is out of the range 1-7");
+                    }
+                    input.nextLine();
+                    input.nextLine();
+                    break;
+                case 13:
+                    System.out.println(RED+"##############################"+RESET);
+                    System.out.println("Enter start the number ::");
+                    int start = input.nextInt();
+                    System.out.println("Enter end the number :: ");
+                    int end=input.nextInt();
+                    int eves=0,ods=0,evem=1,odm=1 ,sum=0,m=1;
+                    for(int i=start ;i<=end ;i++)
+                    {
+                        sum=sum+i;
+                        m=m*i;
+                        if(i%2==0){
+                            evem=evem*i;
+                            eves=eves+i;
+                        }
+                        else
+                        {
+                            ods=ods+i;
+                            odm=odm*i;
+                        }}
+                        System.out.println("#########################");
+                        System.out.println("#########################");
+                        System.out.println("#########################");
+                        System.out.println("1-EVEN\n" +
+                                "2-ODD\n 3-all vulae");
+                        System.out.println("CHOOSE the number");
+                        int ch =input.nextInt();
+                        input.nextLine();
+                        switch (ch){
+                        case 1:
+                            System.out.println("the sum =  "+eves+"\n the beating =  "+evem);
+                        break;
+                            case 2:
+                                System.out.println("the sum ="+ods+" \n the beating = "+odm);
+                                break;
+                            case 3:
+                                System.out.println("the sum = "+ sum+" \n the beating =  "+m);
+                                break;
+                            default:
+                                System.out.println(RED+"ERORR"+RESET);
+                        }
+                        input.nextLine();
+
+break;
+
+                case 14:
+                    System.out.println("####################################");
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("HOW Many numbers do yuo want to sum? ");
+                    int nm14=input.nextInt();
+                    int su14=0;
+                    for(int i=1; i<=nm14;i++){
+                        System.out.println("Enter the number "+i);
+                        int g=input.nextInt();
+                        su14=su14+g;
+                    }
+                    System.out.println("THE SUM ALL ::"+su14);
+                    input.nextLine();
+                    input.nextLine();
+                    break;
+                case 15:
+
+                    System.out.println("Numbers  Squares");
+                    for (int i = 0; i <= 10; i++) {
+                        System.out.println(i + " \t \t \t " + Math.pow(i, 2));}
+                    input.nextLine();
+                        break;
+
+                    case 16:
+                        System.out.println("######################");
+
+                        System.out.println("ENTER YOUR Names ");
+                        String  name16= input.nextLine().toLowerCase();
+                        System.out.println("ENTER THE LATTER ");
+                        char ch16=input.next().charAt(0);
+
+                        int cond=0;
+                        for( int i=name16.indexOf(ch16);i<=name16.lastIndexOf(ch16);i++) {
+                            if (name16.charAt(i) == ch16) {
+                                cond = cond + 1;
+                                System.out.println (i + "\t");
+                            }
+                        }
+                                System.out.println("\nThe count of char" + ch16 +" "+ cond);
+                        input.nextLine();
+                        input.nextLine();
+                        break;
+                case 17:
+                    System.out.println("Enter number is ::");
+                    int nu17=input.nextInt();
+                    int fact=1;
+                    if(nu17==0 || nu17==1)
+                    {
+                        fact=nu17;
+                      System.out.println("the fact = "+nu17);
+                    }
+                    else if (nu17>0)
+                    {
+                        int i =nu17;
+                        while (i>=1){
+                            fact=fact*i;
+                            i--;
+                        }
+                    }
+                    System.out.println("The foctorial of " + nu17 + "=" + fact);
+                    input.nextLine();
+                    input.nextLine();
+                    break;
+                case 18:
+                    String name18=" ";
+                    while (name18.isBlank()){
+                        System.out.println("Enter your name");
+                        name18=input.nextLine();
+                    }
+                    System.out.println("welcome " + name18);
+                do {
+
+                    System.out.println("Enter your name:");
+                } while (name18.isBlank());
+                System.out.println("Hello " + name18);
+                    input.nextLine();
+                break;
+                case 19:
+                    int tem=0;
+                    Random ran19=new Random();
+                    System.out.println("enter the main  ::");
+                    int min = input.nextInt();
+                    System.out.println("enter  the max ::");
+                    int max = input.nextInt();
+                    int vule = ran19.nextInt(min,max);
+                    System.out.println("Number Guessing game");
+                    int gu19 ;
+                    System.out.println("Guess the number between:" + min + "," + max);
+                    do{
+                     tem++;
+                     System.out.println("enter your guess");
+                      gu19=input.nextInt();
+                     if(gu19<vule)
+                         System.out.println("Your guess lower than random");
+                     else if (gu19>vule)
+                         System.out.println("Your guess higher than random");
+                         else
+                     {
+                         System.out.println("You win the game after " + tem + " attempts");
+                         System.out.println("Your guess:" + gu19);
+                         System.out.println("The random number is:" + gu19+" ");
+                         input.nextLine();
+                     }
+
+                    }while (gu19!= vule);
+                    input.nextLine();
+                    break;
+                case 20:
+
+
+                    for (int i = 1; i <= 5; i++) {
+                        for (int j = 1; j <= i; j++) {
+                            System.out.print("*\t");
+                        }
+                        System.out.println();
+                    }
+                    input.nextLine();
+                    break;
+                case 21:
+                    break;
+                default:
+                    System.out.println("ERROR");
+                            }
+        } while (task != 21);
+    }}
