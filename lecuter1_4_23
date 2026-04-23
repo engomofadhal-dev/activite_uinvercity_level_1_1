@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class part_2 {
+    public static void main(String [] args){
+        Scanner in= new Scanner(System.in);
+        int[][] arr={{1,2,3,4},{22,11,16,20},{32,55,60,5}};
+        int even=0,odd=0;
+        for(int i=0;i< arr.length;i++)
+            for(int j=0;j< arr[0].length;j++)
+            {
+                if(arr[i][j]%2==0)
+                    even++;
+                else
+                    odd++;
+
+            }
+        int n=0,o=0;
+        int even_arr[]=new int[even];
+        int odd_arr[]=new int[odd];
+
+
+        for(int i=0;i< arr.length;i++)
+            for(int j=0;j< arr[0].length;j++)
+            {
+                if(arr[i][j]%2==0){
+                    even_arr[n]=arr[i][j];
+                n++;}
+                else{
+                odd_arr[o] = arr[i][j];
+                o++;
+            }
+            }
+
+for (int i=0;i<even;i++)
+    System.out.print(even_arr[i]+" ");
+System.out.println();
+        for (int i=0;i<odd;i++)
+            System.out.print(odd_arr[i]+" ");
+
+    }
+}
