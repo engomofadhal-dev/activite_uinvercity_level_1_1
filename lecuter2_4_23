@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class AVREJ {
+    public static void main(String []args){
+        Scanner input=new Scanner(System.in);
+        System.out.println("ENTER NUMBER OF STUDENT ?");
+        int nu_student=input.nextInt();
+        System.out.println("enter number of corss");
+        int nu_corse=input.nextInt();
+
+        String NAME[]=new String[nu_student];
+        int  corse[][]=new int[nu_student][nu_corse];
+        for(int i=0 ;i<nu_student;i++){
+        System.out.println("enter name the student nu= "+(i+1));
+        int averg=0;
+        input.nextLine();
+        NAME[i]=input.nextLine();
+
+
+            System.out.println("\n ENTER NUMBER THE GRADE OF STUDENT = "+(i+1));
+        for(int j =0;j<corse.length;j++){
+
+        System.out.println("ENTER GRADE"+(j+1));
+        corse[i][j]=input.nextInt();
+        averg=averg+corse[i][j];
+        }
+        System.out.println("avreg"+averg/nu_corse);}
+    }
+}
