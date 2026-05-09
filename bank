@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class BANKING {
+    static Scanner input=new Scanner(System.in);
+    public static double Cash_deposit(double monay){
+        System.out.println("Enteer number mony");
+        double Cash_deposit=input.nextDouble();
+        monay+=Cash_deposit;
+
+return monay;
+    }
+
+    public static double Cash_withdrawal(double monay){
+        System.out.println("Enteer number mony");
+        double Cash_deposit=input.nextDouble();
+        monay-=Cash_deposit;
+
+        return monay;
+    }
+    public static void main(String args []){
+
+        /*
+        * ايداع
+        سحب *
+        *  عرض */
+        System.out.println("1_Cash deposit\n" +
+                "2_Cash withdrawal\n" +
+                "3_View balance\n" +
+                "4_Exit");
+        double maony=0;
+        boolean answer=true;
+        do {
+
+
+        int ch=input.nextInt();
+        switch (ch){
+            case 1:
+                maony=Cash_deposit(maony);
+                System.out.println("the maony is"+maony);
+
+                break;
+            case 2:
+                maony=Cash_withdrawal(maony);
+                System.out.println("the maony is"+maony);
+                break;
+            case 3:
+                System.out.println("the maony is"+maony);
+                break;
+            case 4:
+                answer=false;
+                break;
+            default:
+                System.out.println("<< ERROR >>");
+        }
+        }while (answer);
+    }
+}
