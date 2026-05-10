@@ -1,0 +1,145 @@
+import java.util.Scanner;
+
+public class steffe {
+    public static void main(String[] args){
+        boolean Exit_1 = true;
+        String Steff_name[] = null;
+        int Steff_age[] = null;
+        int Steff_Salary[] = null;
+        String Staff_ID[] = null;
+        do {
+            chose();
+            int Chooes=input.nextInt();
+            switch(Chooes){
+                case 1:
+                    System.out.println("Enter number the Steff on the compley ");
+                    int number_Steff=input.nextInt();
+                    Steff_name =new String[number_Steff];
+                    Steff_age =new int[number_Steff];
+                    Steff_Salary =new int[number_Steff];
+                    Staff_ID =new String[number_Steff];
+                    number_Steff=Enter_Data_Steff(number_Steff,Steff_name,Staff_ID,Steff_age,Steff_Salary);
+                    break;
+                case 2:
+
+                    System.out.println("____________# 2_View Data The Steff #___________");
+                    System.out.println("The Steff name \t\t  "+"The Steff age \t "+ "The Steff Salary  "+"The Steff Department   ");
+                    for(int i=0;i<Steff_age.length;i++) {
+                        View_Data_The_Steff(Steff_name[i],Staff_ID[i],Steff_age[i],Steff_Salary[i]);
+                    }
+                    break;
+                case 3:
+                    for(int i=0;i<Steff_Salary.length;i++)
+                        for(int j=1;j<Steff_Salary.length;j++){
+                            if(Steff_Salary[i]<Steff_Salary[j]){
+                                Ranking_Steff_by_salary(Steff_name,Staff_ID,Steff_age,Steff_Salary,i,j);
+
+                            }
+                        }
+
+                    break;
+                case 4:
+
+Searching_by_number_his_Steff(Steff_name,Staff_ID,Steff_age,Steff_Salary);
+break;
+                case 5:
+                    int index=-1;
+int max=Steff_Salary[0];
+for(int i=1;i<Steff_Salary.length;i++)
+    if(max<Steff_Salary[i]){
+        max=Steff_Salary[i];
+        index=i;
+    }
+                    View_Data_The_Steff(Steff_name[index],Staff_ID[index],Steff_age[index],Steff_Salary[index]);
+break;
+                case 6:
+                    Exit_1=false;
+                    break;
+                default:
+                    System.out.println("ERROR");
+            }
+
+
+        }while(Exit_1);
+    }
+
+
+    static Scanner input=new Scanner(System.in);
+
+
+
+    public static int Enter_Data_Steff(  int number_Steff,String Steff_name[],String Staff_ID[], int Steff_age[] , int Steff_Salary[]){
+        System.out.println("<<<< Enter Data The Steff >>>>  \n");
+
+
+        for(int i=0;i<number_Steff;i++){
+            System.out.print("Enter Steff's Name ? ");
+            input.nextLine();
+            Steff_name[i] = input.nextLine();
+            System.out.print(" Enter Steff's age ? ");
+            Steff_age[i] = input.nextInt();
+            System.out.print("\r Enter Steff's Salary ?");
+            Steff_Salary[i] = input.nextInt();
+            System.out.print("\r");
+            System.out.println("Enter Staff's Department : ( IT , HR ,MKT ) ?");
+            Staff_ID[i] = input.next();
+            System.out.print("\r");
+            System.out.println("<< Save Data The Staff Now >> ");
+
+
+        }
+   return number_Steff;}
+    public static void View_Data_The_Steff(String Steff_name,String Staff_ID, int Steff_age , int Steff_Salary){
+
+                System.out.println("\t\t"+Steff_name +"\t\t\t" + Steff_age+"\t\t\t\t"+ Steff_Salary +"\t\t\t\t"+Staff_ID);
+                System.out.println( );
+
+
+    }
+    public static void Ranking_Steff_by_salary(String Steff_name[],String Staff_ID[], int Steff_age[] , int Steff_Salary[],int i ,int j){
+temp(Steff_age,i,j);
+temp(Steff_Salary,i,j);
+temp(Steff_name,i,j);
+temp(Staff_ID,i,j);
+    }
+
+
+
+
+    public static void temp(int[] steff_ralarly,int i,int j){
+
+        int temp=steff_ralarly[i];
+        steff_ralarly[i]=steff_ralarly[j];
+        steff_ralarly[j]=temp;
+
+    }
+    public static void temp(String[] steff_ralarly,int i,int j){
+
+        String temp=steff_ralarly[i];
+        steff_ralarly[i]=steff_ralarly[j];
+        steff_ralarly[j]=temp;
+
+    }
+public static void Searching_by_number_his_Steff(String Steff_name[],String Staff_ID[], int Steff_age[] , int Steff_Salary[]){
+        System.out.print(" Enter number the steff ?");
+        int number_s=input.nextInt();
+        number_s=number_s+1;
+    View_Data_The_Steff(Steff_name[number_s],Staff_ID[number_s],Steff_age[number_s],Steff_Salary[number_s]);
+
+}
+public static void chose(){
+    System.out.println("1_Enter Data Steff \n" +
+            "2_View Data The Steff \n" +
+            "3_Ranking Steff by salary (from highest to lowest paid) " +
+            "\n4_Searching by number his Steff \n" +
+            "5_View Data the Steff Highest  " +
+            "\n6_Exit  on System  \n\n Enter choose number ");
+
+}
+
+}
+
+
+
+
+
